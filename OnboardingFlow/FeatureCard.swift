@@ -8,11 +8,41 @@
 import SwiftUI
 
 struct FeatureCard: View {
+
+    let iconName: String
+    let description: String
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        //HSTACK BEFORE
+        VStack{
+            Image(systemName: iconName)
+                .font(.system(size: 45))
+                .foregroundStyle(.white)
+                .frame(width: 50)
+                .padding(.trailing, 10)
+            
+            Text(description)
+                .foregroundStyle(.white)
+            
+            
+            Spacer()
+        
+            }
+        
+        .padding() //Applied to the HStack
+        .background(.red, in: RoundedRectangle(cornerRadius: 12))
+        .padding() //Applied to the Background
+        //.border(Color.black)
+        
+    
+
+        }
+        
+        
     }
-}
+
 
 #Preview {
-    FeatureCard()
+    FeatureCard(iconName: "bolt.badge.clock.fill", description: "You will loose track of time from now on")
 }

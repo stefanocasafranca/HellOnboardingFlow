@@ -9,10 +9,26 @@ import SwiftUI
 
 struct FeaturesPage: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack{
+            Text("This is the first circle: The Limbo")
+                .font(.title)
+                .fontWeight(.semibold)
+                .padding(.bottom)
+                .foregroundStyle(.white)
+            
+            
+            FeatureCard(iconName: "bolt.badge.clock.fill", description: "You will loose track of time from now on")
+            
+            FeatureCard(iconName: "digitalcrown.horizontal.press.fill", description: "One day you will continue to the next circle")
+        }
+        
+       
     }
 }
 
 #Preview {
     FeaturesPage()
+        .frame(maxHeight: .infinity)
+    
 }
